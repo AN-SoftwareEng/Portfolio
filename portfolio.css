@@ -62,8 +62,8 @@
 }
 
 html, body { 
-    height: 100vh; /* Fixed height */
-    width: 100vw; 
+    height: 100%; /* Fixed height */
+    width: 100%; 
     background: var(--bg-black); 
     color: var(--text-main); 
     font-family: var(--sans); 
@@ -746,5 +746,6 @@ html, body {
 .mt-20 { margin-top: 20px; }
 .mb-20 { margin-bottom: 20px; }
 .text-upper { text-transform: uppercase; }
+
 
 /* End of Master Stylesheet */
