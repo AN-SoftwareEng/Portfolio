@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+  <title>ARP | Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Space+Mono&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js"></script>
+  <style>
+    /* New Styling specifically for the Hero (Index) Section */
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr; /* Splits text and image */
+      gap: 50px;
+      align-items: center;
+      padding: 40px 0;
+      min-height: 80vh;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .hero-title {
+      font-family: 'Pathway Gothic One', sans-serif;
+      font-size: clamp(4rem, 8vw, 7rem); /* Responsive sizing */
+      line-height: 0.85;
+      margin: 20px 0;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .accent-text {
+      color: #a855f7; /* Matching the purple accent */
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      border-left: 2px solid #a855f7;
+      padding-left: 25px;
+      background: rgba(168, 85, 247, 0.03);
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .poster-frame {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .poster-img { 
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.3s ease;
+    }
+
+    .poster-img:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Maintain your original layout integrity */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-title { font-size: 5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <div class="master-frame">
+    <aside class="sidebar">
+      <div class="logo glitch" data-text="ARP.">ARP<span class="dot">.</span></div>
+
+      <nav class="frame-nav">
+        <button class="nav-btn active" data-tab="home">
+          <span class="nav-num">01</span> INDEX
+        </button>
+        <button class="nav-btn" data-tab="expertise">
+          <span class="nav-num">02</span> SKILLS
+        </button>
+        <button class="nav-btn" data-tab="projects">
+          <span class="nav-num">03</span> PROJECTS
+        </button>
+        <button class="nav-btn" data-tab="experience">
+          <span class="nav-num">04</span> CAREER
+        </button>
+        <button class="nav-btn" data-tab="contact">
+          <span class="nav-num">05</span> CONTACT
+        </button>
+
+        <div class="nav-divider" style="height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0;"></div>
+
+        <a href="Your_Resume.pdf" download="ARP_Software_Engineer_Resume" class="nav-btn resume-link"
+          style="text-decoration: none; color: #007bff;">
+          <span class="nav-num">>></span> DOWNLOAD_CV
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-box">
+          <span class="pulse"></span> SYSTEM_STABLE
+        </div>
+      </div>
+    </aside>
+
+    <main class="viewport">
+
+      <section class="tab-content active" id="home">
+        <div class="hero-container">
+          <div class="hero-text">
+            <p class="mono-label glitch" data-text="// SOFTWARE_ENGINEER_5Y">// SOFTWARE_ENGINEER_5Y</p>
+            <h1 class="hero-title glitch" data-text="SCALABLE">
+              SCALABLE<br>
+              <span class="accent-text glitch" data-text="&">&</span>
+              <span class="glitch" data-text="SECURE">SECURE</span>
+            </h1>
+            <p class="hero-sub">
+              A Full-Stack Engineer specializing in <strong>.NET</strong>, building high-integrity, cloud-native applications.
+              Experienced in engineering secure <strong>microservices</strong> and responsive front-ends with <strong>99.9% uptime reliability</strong>.
+              Focused on transforming complex logic into elegant, scalable solutions where performance, security, and
+              stability are paramount.
+            </p>
+          </div>
+          <div class="hero-visual">
+            <div class="poster-frame">
+              <img src="Poster (1).jpg" alt="Engineering Poster" class="poster-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="expertise">
+        <p class="mono-label">// CORE_COMPETENCIES</p>
+        <div class="features-grid">
+          <div class="feature-card"><strong>BACK-END</strong><span>Java (Spring Boot), .NET Core (C#),
+              Microservices.</span></div>
+          <div class="feature-card"><strong>FRONT-END</strong><span>React, Angular, Vue.js, TypeScript.</span></div>
+          <div class="feature-card"><strong>CLOUD</strong><span>AWS, Azure, Docker, Kubernetes.</span></div>
+          <div class="feature-card"><strong>DATABASE</strong><span>SQL Server, PostgreSQL, MongoDB.</span></div>
+          <div class="feature-card"><strong>SECURITY</strong><span>OAuth2, SSL/TLS, Middleware.</span></div>
+          <div class="feature-card"><strong>METHODOLOGY</strong><span>Agile/Scrum, Jest, Swagger.</span></div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="projects">
+        <p class="mono-label">// DEPLOYED_SOLUTIONS</p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <strong>FINTECH_API</strong>
+            <span>Secure banking middleware built with Spring Boot & OAuth2.</span>
+            <a href="#" style="color:#007bff; font-size: 0.7rem; margin-top: 10px; display: block;">[VIEW_SOURCE]</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="experience">
+        <p class="mono-label">// CAREER_TRAJECTORY</p>
+        <div class="timeline-container">
+          <div class="timeline-v-line"></div>
+          <div class="timeline-row left">
+            <div class="timeline-card" data-date="2024 — PRES">
+              <h3>GeniePro</h3>
+              <p><strong>Software Engineer (Architect)</strong></p>
+              <p>Java/Spring Boot ecosystems and security layers.</p>
+            </div>
+          </div>
+          <div class="timeline-row right">
+            <div class="timeline-card" data-date="2023 — 2024">
+              <h3>Palni INC</h3>
+              <p><strong>Software Engineer</strong></p>
+              <p>Focused on .NET Core API development and Azure Cloud infrastructure.</p>
+            </div>
+          </div>
+          <div class="timeline-row left">
+            <div class="timeline-card" data-date="2019 — 2021">
+              <h3>Legacy Systems</h3>
+              <p><strong>Software Engineer</strong></p>
+              <p>Maintained and migrated legacy applications to modern frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="contact">
+        <p class="mono-label">// ESTABLISH_CONNECTION</p>
+        <div class="contact-split">
+          <div class="form-container">
+            <form id="contact-form">
+              <input type="text" class="frame-input" placeholder="IDENTIFY_NAME" required>
+              <input type="email" class="frame-input" placeholder="CONTACT_EMAIL" required>
+              <textarea class="frame-input" rows="5" placeholder="MESSAGE_PAYLOAD" required></textarea>
+              <button class="transmit-btn">TRANSMIT_DATA</button>
+            </form>
+          </div>
+
+          <div class="terminal-container">
+            <div class="terminal-win">
+              <div class="t-head">
+                <span class="t-dot" style="background:#ff5f56"></span>
+                <span class="t-dot" style="background:#ffbd2e"></span>
+                <span class="t-dot" style="background:#27c93f"></span>
+              </div>
+              <div class="t-body">
+                <p><span class="t-user">arp@dev:~$</span> status --check</p>
+                <p class="t-green">> ACTIVE: READY_FOR_COMMS</p>
+                <div style="margin-top: 20px;">
+                  <p class="t-meta">LOCATION // <span style="color:white">HOUSTON, TX</span></p>
+                  <p class="t-meta">EMAIL // <a href="mailto:hello@arp.dev"
+                      style="color:#007bff; text-decoration:none">HELLO@ARP.DEV</a></p>
+                  <p class="t-meta">RESUME // <a href="Your_Resume.pdf" download
+                      style="color:#27c93f; text-decoration:none">[GET_CV.PDF]</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        if (!button.classList.contains('resume-link')) {
+          document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+          const targetId = button.getAttribute('data-tab');
+          document.getElementById(targetId).classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
